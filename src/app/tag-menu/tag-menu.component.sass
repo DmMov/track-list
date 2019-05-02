@@ -1,0 +1,25 @@
+\:host
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   .tag-menu-link
+      position: relative
+      color: #fff
+      text-transform: uppercase
+      font-size: .8rem
+      font-weight: bold
+      flex: 1 0 33.3vw
+      text-align: center
+      padding: 40px 0
+      &.active
+         &:before
+            content: ''
+            width: 2px
+            height: 2px
+            position: absolute
+            left: calc(50% - 1px)
+            bottom: 35px
+            background-color: currentColor
+            border-radius: 50%
+
+
+

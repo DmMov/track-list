@@ -1,0 +1,57 @@
+\:host
+   width: 80%
+   margin: 0 auto
+   .title
+      position: relative
+      font-weight: 900
+      padding: 40px
+      text-align: center
+      color: #fff
+      &:before
+         content: ''
+         width: 50px
+         height: 3px
+         background-color: currentColor
+         position: absolute
+         bottom: 30px
+         left: calc(50% - 25px)
+   .tracks-wrap
+      display: flex
+      position: relative
+      justify-content: center
+      flex-wrap: wrap
+      width: 100%
+      min-height: 600px
+      background-color: #292B2F
+      padding: 160px 20px 40px
+      .title
+         position: absolute
+         top: 0
+         left: 0
+         &::before
+            display: none
+      .active-genre
+         position: absolute
+         top: 90px
+         left: 40px
+         color: #5C5EDC
+      .track
+         flex-basis: 22%
+         margin: 10px
+         height: 200px
+         background-color: #1D1E22
+
+      @media screen and (max-width: 1300px) 
+         .track 
+            flex-basis: 28%
+
+      @media screen and (max-width: 1000px) 
+         .track 
+            flex-basis: 45%
+
+   @media screen and (max-width: 580px) 
+      .tracks-wrap
+         padding: 40px 10px
+         .track 
+            flex-basis: 90%
+   
