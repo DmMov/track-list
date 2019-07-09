@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TracksService } from '../tracks.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: '.tag-menu',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TagMenuComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private tracksService: TracksService, private route: ActivatedRoute) { }
   ngOnInit() {
   }
 
+  onLinkClick(event: { target: { name: string; }; }) {
+    this.tracksService.getTracks(event.target.name);
+  }
 }

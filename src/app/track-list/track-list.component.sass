@@ -1,12 +1,14 @@
 \:host
-   width: 80%
+   width: 70%
    margin: 0 auto
-   .title
+   .tracks-title
       position: relative
       font-weight: 900
       padding: 40px
       text-align: center
       color: #fff
+      margin-bottom: 50px
+      text-transform: uppercase
       &:before
          content: ''
          width: 50px
@@ -17,41 +19,51 @@
          left: calc(50% - 25px)
    .tracks-wrap
       display: flex
-      position: relative
-      justify-content: center
       flex-wrap: wrap
-      width: 100%
-      min-height: 600px
+      justify-content: center
+      position: relative
       background-color: #292B2F
-      padding: 160px 20px 40px
-      .title
+      padding: 160px 20px 20px
+      box-shadow: 0 0 34px #ffffff05
+      .titles-wrap
          position: absolute
-         top: 0
-         left: 0
-         &::before
-            display: none
-      .active-genre
-         position: absolute
-         top: 90px
+         top: 40px
          left: 40px
-         color: #5C5EDC
-      .track
-         flex-basis: 22%
-         margin: 10px
-         height: 200px
-         background-color: #1D1E22
+         .sub-title
+            font-weight: 900
+            color: #fff
+         .active-genre
+            margin-top: 10px
+            color: #5C5EDC
+      
+      &::before, &::after
+         content: ''
+         background-color: #292B2F
+         width: 96%
+         height: 60px
+         position: absolute
+         top: -20px
+         left: 2%
+         z-index: -1
+         box-shadow: 0 0 14px #ffffff05
+      &::after
+         width: 92%
+         top: -40px
+         left: 4%
+         z-index: -2
 
-      @media screen and (max-width: 1300px) 
-         .track 
-            flex-basis: 28%
 
-      @media screen and (max-width: 1000px) 
-         .track 
-            flex-basis: 45%
-
-   @media screen and (max-width: 580px) 
+@media screen and (max-width: 768px)
+   \:host
+      width: 95%
       .tracks-wrap
-         padding: 40px 10px
-         .track 
-            flex-basis: 90%
-   
+         padding: 100px 10px 10px
+         .titles-wrap
+            top: 20px
+            left: 20px
+            .sub-title
+               font-weight: 900
+               font-size: 1.7rem
+            .active-genre
+               margin-top: 5px
+

@@ -1,0 +1,70 @@
+\:host
+   position: relative
+   display: flex
+   flex-direction: column
+   justify-content: center
+   color: #fff
+   flex-basis: 220px
+   margin: 10px
+   height: 220px
+   background-color: #1D1E22
+   border-radius: .5rem
+   padding: 10px 20px
+   text-align: center
+   cursor: pointer
+   overflow: hidden
+   transition: all .25s ease
+   .icon
+      margin-bottom: 20px
+      font-size: 1.25rem
+   .name
+      font-weight: bold
+      font-size: 1.25rem
+   .artist-name
+      margin-top: 20px
+      font-size: .8rem
+      color: #5C5EDC
+   .duration
+      position: absolute
+      right: 10px
+      bottom: 10px
+      font-weight: bold
+      font-size: .8rem
+      opacity: .5
+   .tag
+      position: absolute
+      top: 10px
+      left: 10px
+      font-size: .7rem
+      font-weight: bold
+      text-transform: capitalize
+      padding: 5px
+      background-color: #5C5EDC
+      border-radius: 5px
+      transition: all .25s ease
+   .rank
+      position: absolute
+      top: 0
+      right: 10px
+      opacity: .2
+      font-size: 7rem
+      z-index: 0
+   &::before
+      content: ''
+      position: absolute
+      top: -30px
+      left: -25%
+      bottom: -30px
+      width: 75%
+      background-color: #ffffff07
+      transform: rotate(15deg)
+   &:hover
+      background-color: #5C5EDC
+      .artist-name
+         color: #292B2F
+         font-weight: bold
+      .tag
+         background-color: #1D1E22
+
+
+

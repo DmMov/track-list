@@ -1,0 +1,8 @@
+<h1 class="tracks-title">{{ tracksService.title | uppercase }}</h1>
+<div class="tracks-wrap">
+  <div
+    *ngFor="let t of tracksService.tracks"
+    class="chart-track"
+    [track]="t"
+  ></div>
+</div>

@@ -1,0 +1,44 @@
+\:host
+    background-color: #1D1E22
+    flex-basis: 220px
+    height: 220px
+    margin: 10px
+    color: #ffffff
+    text-align: center
+    padding: 20px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    align-items: center
+    position: relative
+    overflow: hidden
+    .rank
+      position: absolute
+      top: 0
+      right: 10px
+      opacity: .2
+      font-size: 7rem
+      z-index: 0
+    .track-icon
+        grid-column: span 2
+        font-size: 2rem
+    .name
+        grid-column: span 2
+        font-weight: 900
+    .artist-name
+        grid-column: span 2
+        color: #5C5EDC
+    .listeners, .playcount
+        font-size: .8rem
+        font-weight: 700
+        opacity: .75
+        &-count
+            margin-left: 10px
+    &::before
+        content: ''
+        position: absolute
+        top: -30px
+        left: -25%
+        bottom: -30px
+        width: 75%
+        background-color: #ffffff07
+        transform: rotate(15deg)

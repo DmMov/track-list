@@ -1,0 +1,41 @@
+\:host
+    width: 70%
+    margin: 0 auto
+    .tracks-title
+        position: relative
+        color: #ffffff
+        text-align: center
+        padding: 20px
+        font-weight: 900
+        &::before
+            content: ''
+            height: 3px
+            width: 50px
+            background-color: #ffffff
+            position: absolute
+            bottom: 10px
+            left: calc(50% - 25px)
+    .tracks-wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        position: relative
+        background-color: #292B2F
+        padding: 20px
+        box-shadow: 0 0 34px #ffffff05
+        margin-top: 50px
+        &::before, &::after
+            content: ''
+            background-color: #292B2F
+            width: 96%
+            height: 60px
+            position: absolute
+            top: -20px
+            left: 2%
+            z-index: -1
+            box-shadow: 0 0 14px #ffffff05
+        &::after
+            width: 92%
+            top: -40px
+            left: 4%
+            z-index: -2

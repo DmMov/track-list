@@ -1,23 +1,8 @@
-<h1 class="title">{{ 'tracks' | uppercase }}</h1>
+<h1 class="tracks-title">tracks</h1>
 <div class="tracks-wrap">
-  <h1 class="title">Active genre now</h1>
-  <h2 class="active-genre">Rock</h2>
-  <div class="track"></div>
-  <div class="track"></div>
-  <div class="track"></div>
-  <div class="track"></div>
-  <div class="track"></div>
-  <div class="track"></div>
-  <div class="track"></div>
-  <div class="track"></div>
-  <div class="track"></div>
-  <div class="track"></div>
-  <div class="track"></div>
-  <div class="track"></div>
-  <div class="track"></div>
-  <div class="track"></div>
-  <div class="track"></div>
-  <div class="track"></div>
-  <div class="track"></div>
-  <div class="track"></div>
+  <div class="titles-wrap">
+    <h1 class="sub-title">Active genre now</h1>
+    <h3 class="active-genre">{{ activeTag | titlecase}}</h3>
+  </div>
+  <div *ngFor="let track of tracksService.tracks" class="track" [track]="track" [tag]="activeTag"></div>
 </div>
